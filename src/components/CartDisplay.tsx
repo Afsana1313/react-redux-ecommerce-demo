@@ -2,10 +2,10 @@
 //import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-
+import { GetProductType } from "../type/type";
 function CartDisplay() {
   const [cartOpen, setCartOpen] = useState(false);
-  //const totalValue = useSelector((state) => state.cart.totalPrice);
+  //  const totalValue = useSelector((state:GetProductType) => state.cart.totalPrice );
   return (
     <div className="cart-display" onClick={(e) => setCartOpen(true)}>
       <div className="cart-icon">{/* <ShoppingCartOutlined /> */}cart</div>
@@ -17,10 +17,7 @@ function CartDisplay() {
           ? " item"
           : " items"} */}
       </div>
-      <div className="cart-text">
-        sdfdf
-        {/* $ {totalValue} */}
-      </div>
+      <div className="cart-text">$ TotalValue</div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ type GetProp = {
   product_api_link: string;
   api_featured_image: string;
 };
-function SingleProudctContainer({
+function SingleProductContainer({
   id,
   name,
   brand,
@@ -39,4 +39,4 @@ function SingleProudctContainer({
   );
 }
 
-export default SingleProudctContainer;
+export default SingleProductContainer;

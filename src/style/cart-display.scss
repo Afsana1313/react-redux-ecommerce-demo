@@ -15,9 +15,9 @@
   border-radius: 10px 0 0 10px;
   border: 2px solid red;
   transform: translateY(-50%);
-  @include mobile-portrait-max {
-    width: 110px;
-  }
+  // @include mobile-portrait-max {
+  //   width: 110px;
+  // }
 }
 .cart-item-number {
   width: 100%;
@@ -79,9 +79,9 @@
     overflow-y: scroll;
     height: 100%;
     padding-bottom: 450px;
-    @include mobile-portrait-max {
-      margin: 0 10px;
-    }
+    // @include mobile-portrait-max {
+    //   margin: 0 10px;
+    // }
   }
 }
 .single-product-text {
