@@ -1,0 +1,161 @@
+.cart-display {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  background-color: black;
+  color: white;
+
+  border-radius: 10px 0 0 10px;
+  border: 2px solid red;
+  transform: translateY(-50%);
+  @include mobile-portrait-max {
+    width: 110px;
+  }
+}
+.cart-item-number {
+  width: 100%;
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
+}
+.cart-icon {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}
+.cart-loader-icon {
+  position: absolute;
+  right: 30px;
+}
+.cart-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  z-index: 100;
+  background-color: #f2f2f2;
+  margin-bottom: 450px;
+}
+.cart-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cart-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px 0;
+  .cart-close-btn {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-45%, 100%);
+  }
+}
+.cart-wrapper {
+  top: 50px;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+
+  .mini-cart-product-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    padding-bottom: 450px;
+    @include mobile-portrait-max {
+      margin: 0 10px;
+    }
+  }
+}
+.single-product-text {
+  height: 55px;
+}
+.single-cart-item {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  .cart-image {
+    img {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+  .cart-text {
+    margin: 0 10px;
+    width: calc(100% - 170px);
+  }
+  .cart-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 70px;
+    flex-direction: column;
+    height: 100px;
+  }
+}
+.cart-item-quantity select {
+  border: none;
+  width: 50px;
+  color: red;
+  padding: 5px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.cart-footer {
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  button {
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: light;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  span {
+    color: red;
+  }
+}
+.cart-single-item-total {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  text-align: right;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  &:last-child {
+    margin-bottom: 200px;
+  }
+}

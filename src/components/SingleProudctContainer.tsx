@@ -27,7 +27,14 @@ function SingleProudctContainer({
   return (
     <div className="single-product-wrapper">
       <ProductImage image={image_link} />
-      <ProductContent name={name} brand={brand} price={price} rating={rating} />
+      <ProductContent
+        name={name}
+        brand={brand}
+        price={price}
+        rating={rating}
+        image={image_link}
+        id={id}
+      />
     </div>
   );
 }

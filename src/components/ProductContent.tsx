@@ -4,10 +4,10 @@ import "react-rater/lib/react-rater.css";
 import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../feature/store";
 
-function ProductContent({ name, brand, price, rating }: any) {
+function ProductContent({ name, brand, price, rating, id, image_link }: any) {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch(actions.addToCart({ name, price }));
+    dispatch(actions.addToCart({ name, price, id, image_link }));
   };
   return (
     <>
