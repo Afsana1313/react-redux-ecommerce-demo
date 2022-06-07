@@ -3,11 +3,18 @@ import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../feature/store";
-
+import { cartType } from "../feature/store";
 function ProductContent({ name, brand, price, rating, id, image_link }: any) {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch(actions.addToCart({ name, price, id, image_link }));
+    let item: cartType = {
+      name,
+      price,
+      id,
+      image_link,
+      quantity: 1
+    };
+    dispatch(actions.addToCart(item));
   };
   return (
     <>
